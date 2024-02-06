@@ -11,6 +11,16 @@ server.listen(3000);
 
 app.use(express.static(path.join(__dirname, "public")));
 
+let connectedUsers = [];
+
 io.on("connection", (socket) => {
   console.log("Connection established");
+
+  socket.on("join", (userName) => {
+    socket.userName = userName;
+    connectedUsers.push(userName);
+    console.log(connectedUsers);
+
+    socket.emit("user-ok", connectedUsers);
+  });
 });
