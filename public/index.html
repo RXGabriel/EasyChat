@@ -12,16 +12,21 @@
       <input type="text" name="" id="loginNameInput" />
     </div>
 
-    <div class="page" id="chatPage">
+    <div class="page" id="chatPage" style="display: none">
       <div class="chatArea">
         <ul class="chatList"></ul>
         <ul class="userList"></ul>
-    </div>
-    <div class="chatInput">
-        <input type="text" id="chatTextInput" placeholder="Digite uma mesagem (e aperte ENTER)">
+      </div>
+      <div class="chatInput">
+        <input
+          type="text"
+          id="chatTextInput"
+          placeholder="Digite uma mensagem (e aperte ENTER)"
+        />
+      </div>
     </div>
 
-    <script src = "/socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="/main.js"></script>
   </body>
 </html>
